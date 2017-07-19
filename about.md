@@ -4,12 +4,20 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Somos un equipo de desarrolladores especializados en las siguientes tecnologías:
+
+- Rails
+- MySQL
+- MongoDB
+- Redis
+- React + Redux
+- AWS
+- Android
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Si quieres formar parte de nuestro equipo, motívate y escríbenos.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[dev@beetrack.com](mailto:dev@beetrack.com)
