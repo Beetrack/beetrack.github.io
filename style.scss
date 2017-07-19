@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 19px/1.6 $lora;
   color: $darkGray;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $lora;
   color: $darkerGray;
   font-weight: bold;
 
@@ -174,14 +174,11 @@ img {
     display: block;
     margin: 0 auto;
   }
-
-  img {
-    border-radius: 5px;
-  }
 }
 
 .site-info {
   float: left;
+  margin-top: -15px;
 
   @include mobile {
     float: none;
