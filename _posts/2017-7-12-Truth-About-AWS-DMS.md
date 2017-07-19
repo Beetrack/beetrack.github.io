@@ -7,7 +7,7 @@ post_gravatar: 78ceb574aa61c77bf01f999ca64aebc9
 
 ![AWS DMS](https://pbs.twimg.com/media/CnRPccHUIAAdXrU.jpg)
 
-At first when we heard of AWS [Managed Database Migration Service (DMS)](https://aws.amazon.com/es/dms/), we got pretty existed. The idea of a managed service that could migrate all of our data without having any downtime sounded to good to be true... and it was.
+At first when we heard of AWS [Managed Database Migration Service (DMS)](https://aws.amazon.com/es/dms/), we got pretty exited. The idea of a managed service that could migrate all of our data without having any downtime sounded too good to be true... and it was.
 
 The need for doing the migration was to move our old MySQL database hosted in AWS [Relational Database Service (RDS)](https://aws.amazon.com/es/rds/), into another RDS instance, but locating it inside a [Virtual Private Cloud (VPC)](https://aws.amazon.com/es/vpc/), this way the database would be more secure because it would only be accessible to servers through a local network and it wouldn't have a direct access to the internet.
 
@@ -15,11 +15,11 @@ So, back to DMS. Things got complicated pretty quickly, because our first choice
 
 ![Replication Instance](/images/replication_instance.png)
 
-The downside about this is that apparently our databases where to big for the job, so the server ran out of memory and threw an error. That was solved by choosing a bigger instance in our case a medium one, we also set the number of tables to be loaded on parallel to 4 (default is 8) in the tasks advanced settings, in that way we minimized the load on the replication instance.
+The downside about this is that apparently our databases where too big for the job, so the server ran out of memory and threw an error. That was solved by choosing a bigger instance in our case a medium one, we also set the number of tables to be loaded on parallel to 4 (default is 8) in the tasks advanced settings, in that way we minimized the load on the replication instance.
 
 ![Resplication Task Advanced Settings](/images/task_advanced_settings.png)
 
-Another thing to consider is that unlike EC2 instances, which you pay for only if they are running, you must pay for replication instances whether they are running or if they are stopped, so watch out so you don't incur in overcharges for something you are not using.
+Another thing to consider is that unlike EC2 instances, which you only pay if their are running, you must pay for replication instances whether they are running or stopped, so watch out so you don't incur in overcharges for something you are not using.
 
 All these thing were just a minor setback, the real deal happened after the database was completely migrated and the replication task was only updating and creating new records.
 
