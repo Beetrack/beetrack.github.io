@@ -174,14 +174,11 @@ img {
     display: block;
     margin: 0 auto;
   }
-
-  img {
-    border-radius: 5px;
-  }
 }
 
 .site-info {
   float: left;
+  margin-top: -15px;
 
   @include mobile {
     float: none;
