@@ -10,7 +10,11 @@ layout: default
   </div>
 
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    Written on {{ page.date | date: "%B %e, %Y" }} by <b>{{ page.post_author }}</b>
+  </div>
+
+  <div class="img">
+    <img src="https://s.gravatar.com/avatar/{{ page.post_gravatar }}?s=80" alt="Author Gravatar" height="42" width="42">
   </div>
 
   {% include disqus.html %}
